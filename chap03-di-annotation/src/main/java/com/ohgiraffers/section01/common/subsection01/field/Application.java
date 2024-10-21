@@ -1,4 +1,4 @@
-package com.ohgiraffers.section01.subsection01.field;
+package com.ohgiraffers.section01.common.subsection01.field;
 
 import com.ohgiraffers.section01.common.BookDTO;
 import org.springframework.context.ApplicationContext;
@@ -19,6 +19,7 @@ public class Application {
             System.out.println("book = " + book);
         }
 
+        System.out.println(bookService.selectOneBook(1));
 
     }
 
