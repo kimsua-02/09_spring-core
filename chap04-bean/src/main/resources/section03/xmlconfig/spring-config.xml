@@ -7,7 +7,6 @@
     <bean id="carpBread" class="com.ohgiraffers.common.Bread">
         <constructor-arg name="name" value="붕어빵"/>
         <constructor-arg name="price" value="1000"/>
-
     </bean>
 
     <!-- Beverage 빈 정의: 딸기우유 -->

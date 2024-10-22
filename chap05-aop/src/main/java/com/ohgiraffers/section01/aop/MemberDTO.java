@@ -3,7 +3,6 @@ package com.ohgiraffers.section01.aop;
 public class MemberDTO {
 
     private int id;
-
     private String name;
 
     public MemberDTO() {
@@ -12,6 +11,14 @@ public class MemberDTO {
     public MemberDTO(int id, String name) {
         this.id = id;
         this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "MemberDTO{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
     }
 
     public int getId() {
@@ -28,13 +35,5 @@ public class MemberDTO {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    @Override
-    public String toString() {
-        return "MemberDTO{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                '}';
     }
 }
