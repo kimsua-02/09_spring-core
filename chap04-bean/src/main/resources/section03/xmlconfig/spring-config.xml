@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="carpBread" class="com.ohgiraffers.common.Bread">
+        <constructor-arg name="name" value="붕어빵"/>
+        <constructor-arg name="price" value="1000"/>
+
+    </bean>
+
+    <!-- Beverage 빈 정의: 딸기우유 -->
+    <bean id="milk" class="com.ohgiraffers.common.Beverage">
+        <constructor-arg name="name" value="딸기우유"/>
+        <constructor-arg name="price" value="1500"/>
+        <constructor-arg name="bakedDate" ref="today"/>
+    </bean>
+
+    <!-- Beverage 빈 정의: 지리산암반수 -->
+    <bean id="water" class="com.ohgiraffers.common.Beverage">
+        <constructor-arg value="지리산암반수"/>
+        <constructor-arg value="1000"/>
+        <constructor-arg value="500"/>
+    </bean>
+
+    <!-- ShoppingCart 빈 정의: prototype 스코프 -->
+    <bean id="cart" class="com.ohgiraffers.common.ShoppingCart" scope="prototype"/>
+
+    <!-- Owner 빈 정의: 초기화 및 종료 메서드 설정 -->
+    <bean id="owner" class="com.ohgiraffers.Owner" init-method="openShop" destroy-method="closeShop"/>
+
+</beans>
