@@ -40,39 +40,48 @@ public class Foundation {
      *
      * 12. 스래드(Thread) : 포로그램 내에서 실행되는 기본 단위.
      *   - 멀티 스레딩을 통해 여러 작업을 동시애 처리할 수 있음.
+     *
+     * 13. 속성(Attribute) : 객체가 가진 데이터
+     *   - 클래스의 필드(멤버 변수)로 표현됨.
+     *
+     * 14. 추상 클래스(Abstract Class) : 인스턴스를 만들 수 없으며, 자식 클래스에서 구현해야 하는 추상 메소드를
+     *      가질 수 있는 클래스.
+     *
+     * 15. 클래스 경로(Classpath) : Java Program 이 클래스 파일을 찾는 경로
+     *   - JAR 파일과 디렉토리를 포함.
+     *
+     * 16. JDK, JRE, JVM
+     *   ▶ JDK(Java Development Kit) : 자바 개발을 위한 도구 세트.
+     *      - 컴파일러와 API 포함
+     *   ▶ JRE(Java Runtime Environment) : 자바 프로그램을 실행하기 위한 환경.
+     *      - JVM 포함.
+     *   ▶ JVM(Java Virtual Machine) : 자바 바이트코드를 실행하는 가상 머신.
      * */
 
-    /*
-     * 필드(Field) : 클래스 내에 선언된 변수. 객체의 상태를 나타내는 데 사용됨
-     *   - 필드는 객체의 속성이나 특성을 정의하며, 객체가 갖는 데이터를 저장함.
-     * */
-
-    // [필드의 주요 개념] 1. 선언
-    // 필드는 클래스 내에서 선언되며, 데이터 타입과 이름으로 정의됨.
-
-//    public class Member {
-//        private String name;  // 필드 : 이름
-//        private int age;      // 필드 : 나이
-//    }
 
     /*
-    * 2. 접근제어자
-    * - 필드는 private , protected , public 과 같은 접근제어자를 사용하여 접근 범위를 설정할 수 있다.
-    * - private 로 선언할 시 해당 클래스 내에서만 접근이 가능하고, public 으로 선언하면 외부에서도 접근할 수 있다.
+    * 1. 필드의 정의
+    *   1) 구성 : 필드는 데이터 타입과 이름으로 구성됨.
+    *       ex) int age; 와 같이 선언할 수 있음
+    *   2) 접근 제어자 : 필드는 일반적으로 접근 제어자를 사용하여 접근 범위를 설정함
+    *     ↓ 주요 접근 제어자
+    *       - private : 클래스 내부에서만 접근 가능
+    *       - protected : 같은 패키지 내 또는 자식 클래스에서 접근 가능
+    *       - public : 어디서나 접근 가능
+    *       - (default, no modifier) : 같은 패키지 내에서만 접근 가능
     * */
 
-    // 3. 초기화
-    // 필드는 선언 시 값을 초기화할 수 있다. 또한 생성자에서 초기화할 수도 있다.
-    // (↓ 예시)
-    public class Member {
-        private String name = "Unknown"; //  초기값 설정
+    /*
+    * 2. 필드의 종류
+    *   1) 인스턴드 필드 : 객체마다 별도의 값을 가지는 필드
+    *       - 클래스의 인스턴스를 생성할 때마다 새로운 인스턴스 필드가 생성됨
+    * */
+    public class Person {
+        private String name;
         private int age;
-
-        public Member(String name, int age) {
-            this.name = name;  // 생성자에서 초기화
-            this.age = age;
-        }
     }
+
+
 
 
 }
