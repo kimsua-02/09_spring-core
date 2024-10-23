@@ -8,7 +8,6 @@ import java.util.Map;
 @Service
 public class MemberService {
     private final MemberDAO memberDAO;
-
     @Autowired
     public MemberService(MemberDAO memberDAO){
         this.memberDAO = memberDAO;
